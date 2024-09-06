@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Şifre Üretici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Rastgele Şifre Üretici</h2>
+
+        <label for="length">Şifre Uzunluğu</label>
+        <input type="number" id="length" value="12" min="6" max="15">
+        
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="include-lowercase"> Küçük Harfler</label>
+            <label><input type="checkbox" id="include-uppercase"> Büyük Harfler</label>
+            <label><input type="checkbox" id="include-numbers"> Rakamlar</label>
+            <label><input type="checkbox" id="include-symbols"> Özel Karakterler</label>
+        </div>
+        
+        <input type="text" id="password" placeholder="Şifreniz burada görünecek" readonly>
+        
+        <p id="strength" style="display: none;">Şifre Gücü: </p>
+        
+        <button onclick="generatePassword()">Şifre Üret</button>
+        <button onclick="copyPassword()">Panoya Kopyala</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

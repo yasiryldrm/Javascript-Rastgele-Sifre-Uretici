@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #4a5568, #6d28d9); /* İki renkli arka plan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #f4f4f4;
+    overflow: hidden; /* Scroll bar'ı gizler */
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.85); /* Koyu şeffaf arka plan */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Derin gölge */
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(12px); /* Arka planı bulanıklaştırır */
+    transition: transform 0.3s ease-in-out; /* Container'ı daha dinamik yapar */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Hover efekti ile hafif büyüme */
+    backdrop-filter: none; /* Hover sırasında bulanıklığı kaldırır */
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 24px;
+    font-size: 32px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Daha belirgin başlık gölgesi */
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #e2e8f0;
+    transition: color 0.3s ease; /* Hover efekti ile renk değişimi */
+}
+
+input[type="number"],
+input[type="text"] {
+    width: calc(100% - 28px);
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #4a5568;
+    margin-bottom: 24px;
+    text-align: center;
+    background: #f7fafc;
+    color: #2d3748;
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #6d28d9;
+    background: #ffffff;
+    box-shadow: 0 0 12px rgba(109, 40, 217, 0.6);
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #e2e8f0;
+    transition: color 0.3s ease;
+}
+
+input[type="checkbox"] {
+    margin-right: 12px;
+    accent-color: #6d28d9;
+    transform: scale(1.2); /* Checkbox'ları büyütme */
+}
+
+button {
+    background: #6d28d9;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-top: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background: #4a5568;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#strength {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 12px;
+    transition: opacity 0.3s ease;
+}
